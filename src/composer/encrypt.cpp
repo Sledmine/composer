@@ -50,9 +50,6 @@ namespace Composer {
             throw std::runtime_error("decrypted data is not null terminated");
         }
 
-        // Remove decrypted data checksum
-        buffer.resize(buffer.size() - 33);
-
         return std::move(buffer);
     }
 
